@@ -1,0 +1,19 @@
+<div class="room-card-container">
+  <% @rooms.each do |room| %>
+    <%= link_to room_path(room) do %>
+
+      <div class="room-card">
+        <%= image_tag room.image_url%>
+        <div class="room-card-infos">
+          <div class="description-top">
+            <h2>Chambre n°<%= room.number %></h2>
+            <p><%= room.price_per_night %>€/nuit</p>
+          </div>
+          <p><%= room.surface %>m²</p>
+          <p><%= room.capacite %> voyageurs</p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+
+</div>

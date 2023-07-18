@@ -1,0 +1,70 @@
+.show-container {
+  margin: 35px;
+
+  .show-container-top {
+    display: flex;
+    justify-content: space-evenly;
+
+    .show-pictures {
+      width: 500px;
+      height: 500px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 25px;
+      }
+    }
+
+    .booking {
+      width: 700px;
+      height: 350px;
+
+      .room-name {
+        font-size: 35px;
+        font-weight: bold;
+
+        p {
+          line-height: 1;
+          font-size: 15px;
+          font-weight: lighter;
+          color: rgb(172, 172, 172);
+        }
+      }
+
+      .room-price {
+        font-size: 20px;
+        color: rgb(129, 129, 129);
+      }
+
+      .booking-form {
+        .custom-button {
+          width: 150px;
+          height: 50px;
+          border-radius: 5px;
+          background-color: $rouge;
+          color: white;
+          font-weight: 500;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            background-color: #dd2547
+          }
+        }
+      }
+    }
+  }
+
+  .show-container-bottom {
+    width: 90%;
+    margin: auto;
+
+    h2 {
+      font-weight: bold;
+      color: $rouge;
+    }
+  }
+
+}

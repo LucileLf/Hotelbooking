@@ -1,0 +1,49 @@
+.room-card-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 4vh 16vw;
+  column-gap: 4vw;
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  .room-card {
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+    img {
+    height: 50vh;
+    width: 30vw;
+    object-fit: cover;
+    }
+    .room-card-infos {
+    padding: 16px;
+      .description-top{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 4vh;
+        h2 {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+        }
+        p {
+        font-size: 12px;
+        opacity: .7;
+        margin: 0;
+        }
+      }
+    }
+
+
+
+    .room-card-user {
+    position: absolute;
+    right: 16px;
+    top: -20px;
+    width: 40px;
+    }
+  }
+
+}
