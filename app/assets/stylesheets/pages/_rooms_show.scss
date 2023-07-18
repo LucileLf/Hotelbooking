@@ -4,7 +4,7 @@
   .show-container-top {
     display: flex;
     justify-content: space-evenly;
-
+    column-gap: 2vw;
     .show-pictures {
       width: 500px;
       height: 500px;
@@ -44,7 +44,7 @@
           width: 150px;
           height: 50px;
           border-radius: 5px;
-          background-color: $rouge;
+          background-color: $green;
           color: white;
           font-weight: 500;
           transition: all 0.2s ease-in-out;
@@ -63,7 +63,7 @@
 
     h2 {
       font-weight: bold;
-      color: $rouge;
+      color: $green;
     }
   }
 
