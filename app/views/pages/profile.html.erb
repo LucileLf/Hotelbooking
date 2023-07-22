@@ -1,0 +1,33 @@
+
+<h1>Réservation en cours</h1>
+<% @current_bookings.each do |booking| %>
+  <div class="booking-card">
+    <h2>Chambre n°<%= booking.room.number %></h2>
+    <p>Réservée du <%= booking.start_date %> au <%= booking.end_date %> </p>
+    <p>Prix total: <%= booking.total_price %>€</p>
+    <%= link_to "Annuler cette réservation", booking_path(booking), data: { turbo_method: :delete, turbo_confirm: "Voulez-vous supprimer cette réservation?"}, class: 'text-danger' %>
+  </div>
+<% end %>
+
+<h1>Mes réservations à venir</h1>
+<% @coming_bookings.each do |booking| %>
+  <div class="booking-card">
+    <h2>Chambre n°<%= booking.room.number %></h2>
+    <p>Réservée du <%= booking.start_date %> au <%= booking.end_date %> </p>
+    <p>Prix total: <%= booking.total_price %>€</p>
+    <%= link_to "Annuler cette réservation", booking_path(booking), data: { turbo_method: :delete, turbo_confirm: "Voulez-vous supprimer cette réservation?"}, class: 'text-danger' %>
+  </div>
+<% end %>
+
+<h1>Mes réservations passées</h1>
+<% @passed_bookings.each do |booking| %>
+  <div class="booking-card">
+    <h2>Chambre n°<%= booking.room.number %></h2>
+    <p>Réservée du <%= booking.start_date %> au <%= booking.end_date %> </p>
+    <p>Prix total: <%= booking.total_price %>€</p>
+    <%= link_to "Annuler cette réservation", booking_path(booking), data: { turbo_method: :delete, turbo_confirm: "Voulez-vous supprimer cette réservation?"}, class: 'text-danger' %>
+    <%= link_to "Laissez votre avis!", new_booking_review_path(booking) %>
+  </div>
+<% end %>
+
+<%= link_to "Retourner aux chambres", rooms_path  %>

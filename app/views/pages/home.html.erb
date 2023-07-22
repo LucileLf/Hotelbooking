@@ -1,2 +1,13 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+  <div class="pic-row">
+    <%= image_tag "image1.jpg" %>
+    <%= image_tag "image2.jpg" %>
+  </div>
+  <h1>Roomie</h1>
+  <div class="pic-row">
+    <%= image_tag "image3.jpg" %>
+    <%= image_tag "image4.jpg" %>
+  </div>
+  <div class="btn-row">
+    <%= link_to "Se connecter", new_user_session_path %>
+    <%= link_to "S'inscrire", new_user_registration_path %>
+  </div>

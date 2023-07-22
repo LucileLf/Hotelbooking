@@ -1,0 +1,6 @@
+<p>Chambre n°<%= @booking.room.number %></p>
+<p>Réservée du <%= @booking.start_date %> au <%= @booking.end_date %> </p>
+<p>Prix total: <%= @booking.total_price %>€</p>
+
+<%= link_to "Annuler cette réservation", booking_path(@booking), data: { turbo_method: :delete, turbo_confirm: "Voulez-vous supprimer cette réservation?"}, class: 'text-danger' %>
+<%= link_to "Retourner aux chambres", rooms_path  %>
